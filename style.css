@@ -1,0 +1,932 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 100vw;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.top {
+  background-image: url(./assets/top1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.overlap {
+  position: relative;
+  height: 100vh;
+}
+
+.mountains {
+  background-image: url(./assets/topMountains.png);
+  height: 100vh;
+  margin-top: -60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.top h1 {
+  font-size: 230px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #4d4d4d;
+  font-weight: 400;
+  font-family: "Bebas Neue";
+  width: fit-content;
+  position: relative;
+  bottom: 910px;
+  left: 720px;
+}
+
+.top h1 span {
+  background: -webkit-linear-gradient(
+    -90deg,
+    rgba(63, 78, 108, 1) 0%,
+    rgba(63, 78, 108, 1) 30%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  letter-spacing: 10px;
+  position: absolute;
+  left: 0;
+  bottom: -185px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0;
+  position: relative;
+  z-index: 5;
+}
+
+nav div {
+  display: flex;
+  gap: 50px;
+}
+
+nav img {
+  height: 45px;
+}
+
+nav div a {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fefeff;
+  font-weight: 900;
+  font-style: italic;
+  font-family: "Lato";
+  padding: 0 0.25rem;
+  margin: 0 -0.25rem;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  width: fit-content;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+nav a:hover {
+  box-shadow: inset 200px 0 0 0 #54b3d6;
+}
+
+.menu {
+  display: none;
+  background: #000000a8;
+  padding: 30px 60px;
+  position: fixed;
+  width: 100vw;
+  z-index: 10;
+  transition: all 0.4s ease-in-out;
+}
+.menu div{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu div i{
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  bottom: -20px;
+  background: #00000079;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.menu a {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fefeff;
+  font-weight: 900;
+  font-style: italic;
+  font-family: "Lato";
+  padding: 0 0.25rem;
+  margin: 0 -0.25rem;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  width: fit-content;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.stickyNavbar {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+#losAnglesMountainsLOGO {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #4d4d4d;
+  font-family: "Bebas Neue";
+  letter-spacing: 0.5px;
+  position: relative;
+  top: 5px;
+  left: -40px;
+}
+
+#losAnglesMountainsLOGO span {
+  background: -webkit-linear-gradient(
+    -90deg,
+    rgba(63, 78, 108, 1) 0%,
+    rgba(63, 78, 108, 1) 30%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  letter-spacing: 1.1px;
+  position: relative;
+  top: -5px;
+}
+
+nav .fa-bars {
+  display: none;
+}
+
+.stickyNavbar div a {
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #414f6b;
+  font-weight: 900;
+  font-style: italic;
+  font-family: "Lato";
+  padding: 0 0.25rem;
+  margin: 0 -0.25rem;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  width: fit-content;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#secondSection {
+  background-image: url(./assets/middle.png);
+  height: 110vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: -1;
+}
+
+#secondSection div {
+  position: absolute;
+  top: 20px;
+  left: 28%;
+}
+
+#secondSection h1 {
+  opacity: 0.502;
+  font-size: 136px;
+  color: rgba(63, 78, 108, 1);
+  font-weight: 700;
+  font-family: "Oswald";
+}
+
+#secondSection h1 span {
+  font-size: 32px;
+  color: rgb(9, 22, 55);
+  text-transform: uppercase;
+  font-weight: 700;
+  left: -70px;
+  top: -27px;
+  font-family: "Oswald";
+  position: relative;
+}
+
+#secondSection p {
+  width: 1000px;
+  height: 339px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 300;
+  font-family: "Lato";
+  margin-left: 70px;
+  margin-top: -30px;
+  position: relative;
+}
+
+#history {
+  margin-top: -80px;
+}
+
+#sectiontwo {
+  position: relative;
+}
+
+.carousel {
+  z-index: 1;
+  padding: 20px 0 30px 0;
+  background-color: #414f6bb0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: -190px;
+}
+
+.carousel img {
+  height: 140px;
+}
+
+#sectionThree {
+  background-image: url(./assets/bottom.png);
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sec3Heading {
+  background-color: #fff;
+  display: flex;
+  margin-left: 28%;
+  width: fit-content;
+  align-items: center;
+  position: relative;
+}
+
+.sec3Heading h1 {
+  opacity: 0.502;
+  font-size: 136px;
+  color: #414f6b;
+  font-weight: 700;
+  font-family: "Oswald";
+}
+
+.sec3Heading h3 {
+  font-size: 32px;
+  color: #414f6b;
+  font-weight: 700;
+  font-family: "Oswald";
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 60px;
+  left: 150px;
+}
+
+.sec3Heading p {
+  width: 651px;
+  height: 51px;
+  position: relative;
+  left: 80px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 300;
+  font-family: "Lato";
+}
+
+footer {
+  background-color: #414f6b;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+}
+
+footer div img {
+  height: 45px;
+  background-color: #41547a;
+  mix-blend-mode: multiply;
+  border-radius: 50%;
+}
+
+#losAnglesMountainsLOGOFooter {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #61759e;
+  font-family: "Bebas Neue";
+  letter-spacing: 0.5px;
+  position: relative;
+  left: 10px;
+}
+
+#losAnglesMountainsLOGOFooter span {
+  letter-spacing: 1.2px;
+}
+
+footer p {
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #63769d;
+  font-weight: 900;
+  font-style: italic;
+  font-family: "Lato";
+}
+
+.sec3Nav {
+  background-color: #3f4e6c;
+  padding: 10px 580px;
+}
+
+.sec3Nav a:nth-child(1) {
+  color: #3f4e6c;
+  background: #b0b4be;
+  text-decoration: underline;
+}
+
+.sec3Nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #b0b4be;
+  font-weight: 700;
+  font-family: "Oswald";
+  padding: 10px 15px;
+}
+
+.sec3Nav a:hover {
+  color: #3f4e6c;
+  background: #b0b4be;
+  text-decoration: underline;
+}
+
+.schedule {
+  background-color: #ffffff98;
+  width: fit-content;
+  position: relative;
+  margin-left: 620px;
+  top: 100px;
+  padding: 15px 50px;
+}
+
+.schedule h2 {
+  font-size: 32px;
+  color: #414f6b;
+  font-weight: 700;
+  font-family: "Oswald";
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.mainSchedule {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainSchedule div {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 10px;
+  justify-content: space-between;
+}
+
+.mainSchedule div:nth-child(2) {
+  padding-bottom: 20px;
+}
+
+.mainSchedule div:nth-child(3) {
+  padding-bottom: 30px;
+}
+
+.mainSchedule div p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 300;
+  font-family: "Lato";
+}
+
+@media screen and (max-width: 1920px) {
+  .top h1 {
+    font-size: 120px;
+    bottom: 535px;
+    left: 450px;
+  }
+  .top h1 span {
+    letter-spacing: 10px;
+    position: absolute;
+    left: 0;
+    bottom: -95px;
+  }
+
+  #secondSection div {
+    left: 18%;
+  }
+
+  #secondSection p {
+    line-height: 18px;
+    width: 814px;
+    height: 339px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    font-weight: 300;
+    font-family: "Lato";
+  }
+
+  .sec3Heading {
+    background-color: #fff;
+    display: flex;
+    margin-left: 20%;
+    width: fit-content;
+    align-items: center;
+    position: relative;
+  }
+
+  .sec3Heading p {
+    width: 611px;
+    height: 51px;
+    position: relative;
+    left: 80px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    font-weight: 300;
+    font-family: "Lato";
+  }
+
+  .sec3Nav {
+    background-color: #3f4e6c;
+    padding: 10px 280px;
+  }
+
+  .schedule {
+    background-color: #ffffff98;
+    width: fit-content;
+    position: relative;
+    margin-left: 300px;
+    top: 100px;
+    padding: 15px 50px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .top h1 {
+    font-size: 120px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #4d4d4d;
+    font-weight: 400;
+    font-family: "Bebas Neue";
+    width: fit-content;
+    position: relative;
+    bottom: 490px;
+    left: 400px;
+  }
+
+  .top h1 span {
+    letter-spacing: 10px;
+    position: absolute;
+    left: 0;
+    bottom: -95px;
+  }
+
+  #secondSection div {
+    left: 18%;
+  }
+
+  #secondSection p {
+    width: 814px;
+    height: 339px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .sec3Heading {
+    background-color: #fff;
+    display: flex;
+    margin-left: 20%;
+    width: fit-content;
+    align-items: center;
+    position: relative;
+  }
+
+  .sec3Heading h1 {
+    opacity: 0.502;
+    font-size: 136px;
+    color: #414f6b;
+    font-weight: 700;
+    font-family: "Oswald";
+  }
+
+  .sec3Heading h3 {
+    font-size: 32px;
+    color: #414f6b;
+    font-weight: 700;
+    font-family: "Oswald";
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 60px;
+    left: 150px;
+  }
+
+  .sec3Heading p {
+    width: 611px;
+    height: 51px;
+    position: relative;
+    left: 80px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    font-weight: 300;
+    font-family: "Lato";
+  }
+
+  .sec3Nav {
+    background-color: #3f4e6c;
+    padding: 10px 280px;
+  }
+
+  .schedule {
+    background-color: #ffffff98;
+    width: fit-content;
+    position: relative;
+    margin-left: 300px;
+    top: 100px;
+    padding: 15px 50px;
+  }
+
+  .carousel img {
+    height: 120px;
+  }
+
+  .carousel {
+    z-index: 1;
+    padding: 20px 0 30px 0;
+    background-color: #414f6bb0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: -170px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .top h1 {
+    font-size: 100px;
+    position: relative;
+    bottom: 465px;
+    left: 250px;
+  }
+
+  .top h1 span {
+    letter-spacing: 10px;
+    position: absolute;
+    left: 0;
+    bottom: -80px;
+  }
+
+  #secondSection h1 {
+    font-size: 100px;
+  }
+
+  #secondSection h1 span {
+    font-size: 23px;
+    left: -50px;
+    top: -20px;
+  }
+
+  #secondSection p {
+    width: 614px;
+    height: 339px;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: -20px;
+  }
+
+  .carousel img {
+    height: 100px;
+  }
+
+  .carousel {
+    z-index: 1;
+    padding: 20px 0 30px 0;
+    background-color: #414f6bb0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: -150px;
+  }
+
+  .sec3Heading h1 {
+    font-size: 106px;
+  }
+
+  .sec3Heading h3 {
+    font-size: 23px;
+    bottom: 45px;
+    left: 115px;
+  }
+
+  .sec3Heading p {
+    width: 411px;
+    height: 51px;
+    left: 50px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .sec3Nav {
+    background-color: #3f4e6c;
+    padding: 10px 170px;
+  }
+
+  .schedule {
+    margin-left: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top h1 {
+    font-size: 80px;
+    position: relative;
+    bottom: 440px;
+    left: 200px;
+  }
+
+  .top h1 span {
+    letter-spacing: 8px;
+    position: absolute;
+    left: 0;
+    bottom: -70px;
+  }
+
+  #secondSection h1 {
+    font-size: 90px;
+  }
+
+  #secondSection h1 span {
+    font-size: 20x;
+    left: -42px;
+    top: -20px;
+  }
+
+  #secondSection p {
+    width: 410px;
+    height: 339px;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: -20px;
+  }
+
+  .sec3Heading h1 {
+    font-size: 90px;
+  }
+
+  .sec3Heading h3 {
+    font-size: 20px;
+    bottom: 45px;
+    left: 115px;
+  }
+
+  .sec3Heading p {
+    width: 310px;
+    height: 51px;
+    left: 60px;
+    font-size: 16px;
+    line-height: 17px;
+  }
+
+  .sec3Nav {
+    background-color: #3f4e6c;
+    padding: 10px 110px;
+  }
+
+  .schedule {
+    margin-left: 150px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  nav div a {
+    display: none;
+  }
+
+  nav .fa-bars {
+    display: block;
+    font-size: 23px;
+    padding: 4px;
+  }
+
+  nav .fa-bars:hover {
+    background: #00000034;
+    padding: 4px;
+  }
+
+  .top h1 {
+    font-size: 70px;
+    position: relative;
+    bottom: 420px;
+    left: 60px;
+  }
+
+  .top h1 span {
+    letter-spacing: 8px;
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+  }
+
+  #secondSection h1 {
+    font-size: 70px;
+  }
+
+  #secondSection h1 span {
+    font-size: 20x;
+    left: -32px;
+    top: -20px;
+  }
+
+  #secondSection p {
+    width: 245px;
+    height: 339px;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: -15px;
+    margin-left: 20px;
+  }
+
+  .sec3Heading h1 {
+    font-size: 70px;
+  }
+
+  .sec3Heading h3 {
+    font-size: 24px;
+    bottom: 105px;
+    left: 185px;
+  }
+
+  .sec3Heading p {
+    width: 310px;
+    height: 51px;
+    left: 120px;
+    font-size: 16px;
+    margin-top: -10px;
+    line-height: 17px;
+  }
+
+  .sec3Nav {
+    background-color: #3f4e6c;
+    padding: 10px 50px;
+  }
+
+  .schedule {
+    margin-left: 40px;
+  }
+
+  .sec3Heading {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-left: -7%;
+    width: fit-content;
+    align-items: center;
+    height: 180px;
+    position: relative;
+  }
+
+  .carousel {
+    overflow-x: scroll;
+    z-index: 1;
+    padding: 20px 20px 30px 20px;
+    background-color: #414f6bb0;
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    margin-top: -150px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .top h1 {
+    font-size: 60px;
+    position: relative;
+    bottom: 400px;
+    left: 60px;
+  }
+
+  .top h1 span {
+    letter-spacing: 8px;
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+  }
+
+  nav .fa-bars {
+    display: block;
+    font-size: 23px;
+    padding: 4px;
+  }
+
+  nav .fa-bars:hover {
+    background: #00000034;
+    padding: 4px;
+  }
+
+  .schedule {
+    background-color: #ffffff98;
+    width: fit-content;
+    position: relative;
+    top: 100px;
+    padding: 15px 30px;
+  }
+
+  .stickyNavbar div a {
+    display: none;
+  }
+
+  .sec3Heading {
+    margin-left: -20%;
+  }
+
+  .sec3Nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #b0b4be;
+    font-weight: 700;
+    font-family: "Oswald";
+    padding: 10px 15px;
+  }
+
+  footer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+  }
+
+  footer p {
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #63769d;
+    font-weight: 900;
+    font-style: italic;
+    font-family: "Lato";
+  }
+
+  .break {
+    display: none;
+  }
+
+  #losAnglesMountainsLOGOFooter {
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LA Mountains</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div class="menu">
+      <div>
+        <a onclick="closeMenu()" class="tabHistory" href="#history"
+          >01. history</a
+        >
+        <a onclick="closeMenu()" class="tabTeam" href="#team">02. team</a>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="top">
+      <!-- Navbar -->
+      <nav>
+        <img src="./assets/Logo@4x.png" alt="logo" />
+        <div>
+          <a href="#history">01. history</a>
+          <a href="#team">02. team</a>
+        </div>
+        <i class="fa-solid menuButton fa-bars"></i>
+      </nav>
+      <div class="overlap">
+        <div class="mountains"></div>
+        <h1 id="losAnglesMountains">losangeles <span>mountains</span></h1>
+      </div>
+    </div>
+
+    <!-- Sticky-Navbar -->
+    <div>
+      <nav class="stickyNavbar">
+        <div>
+          <img src="./assets/Logo@4x.png" alt="logo" />
+          <h1 id="losAnglesMountainsLOGO">
+            losangeles <br />
+            <span>mountains</span>
+          </h1>
+        </div>
+        <div>
+          <a href="#history">01. history</a>
+          <a href="#team">02. team</a>
+        </div>
+        <i class="fa-solid fa-bars"></i>
+      </nav>
+      <div id="sectiontwo">
+        <div id="secondSection">
+          <div id="history"></div>
+          <div>
+            <h1 class="number1">01. <span>history</span></h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in
+              ante viverra, rutrum erat rutrum, consectetur mi. Proin at maximus
+              est. Nullam purus ex, iaculis sed erat sed, blandit tincidunt
+              quam. Cras scelerisque id quam sed dignissim Pellentesque urna
+              nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus
+              suscipit dignissim tortor nec congue.
+            </p>
+          </div>
+        </div>
+        <div class="carousel">
+          <img src="./assets/carousel1.png" alt="" />
+          <img src="./assets/carousel2.png" alt="" />
+          <img src="./assets/carousel1.png" alt="" />
+          <img src="./assets/carousel2.png" alt="" />
+        </div>
+      </div>
+      <div class="sec3Heading">
+        <div>
+          <h1 class="number2">02.</h1>
+          <h3>climb</h3>
+        </div>
+        <p>
+          Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida
+          quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim
+          tortor nec congue.
+        </p>
+      </div>
+      <div class="sec3Nav">
+        <a href="#mountain1">mountain 1</a>
+        <a href="#mountain2">mountain 2</a>
+      </div>
+      <div id="sectionThree">
+        <div class="schedule">
+          <h2>schedule</h2>
+          <div class="mainSchedule">
+            <div>
+              <p>25 Nov 2016</p>
+              <p>Vestibulum viverra</p>
+            </div>
+            <div>
+              <p>28 Nov 2016</p>
+              <p>Vestibulum viverra</p>
+            </div>
+            <div>
+              <p>18 Dec 2016</p>
+              <p>Vestibulum viverra</p>
+            </div>
+            <div>
+              <p>7 Jan 2017</p>
+              <p>Vestibulum viverra</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div>
+          <div>
+            <img src="./assets/Logo@4x.png" alt="logo" />
+            <h1 id="losAnglesMountainsLOGOFooter">
+              losangeles <br class="break" />
+              <span>mountains</span>
+            </h1>
+          </div>
+          <p>COPYRIGHT 2016. ALL RIGHTS RESERVED.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      let dropdownMenu = document.querySelector(".menu");
+      let menuButton = document.querySelector(".menuButton");
+      let historyButton = document.querySelector(".tabHistory");
+      let teamButton = document.querySelector(".tabTeam");
+      let closeButton = document.querySelector(".fa-xmark");
+      menuButton.addEventListener("click", function () {
+        dropdownMenu.style.transition = "all 0.4s ease-in-out";
+        dropdownMenu.style.display = "block";
+      });
+      closeButton.addEventListener("click", function () {
+        dropdownMenu.style.display = "none";
+      });
+
+      function closeMenu() {
+        dropdownMenu.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
