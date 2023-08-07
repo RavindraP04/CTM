@@ -30,7 +30,7 @@
           <a href="#history">01. history</a>
           <a href="#team">02. team</a>
         </div>
-        <i class="fa-solid menuButton fa-bars"></i>
+        <i class="fa-solid fa-bars"></i>
       </nav>
       <div class="overlap">
         <div class="mountains"></div>
@@ -130,14 +130,16 @@
 
     <script>
       let dropdownMenu = document.querySelector(".menu");
-      let menuButton = document.querySelector(".menuButton");
+      let menuButton = document.querySelectorAll(".fa-bars");
       let historyButton = document.querySelector(".tabHistory");
       let teamButton = document.querySelector(".tabTeam");
       let closeButton = document.querySelector(".fa-xmark");
-      menuButton.addEventListener("click", function () {
-        dropdownMenu.style.transition = "all 0.4s ease-in-out";
-        dropdownMenu.style.display = "block";
-      });
+      for (let i = 0; i < menuButton.length; i++) {
+        menuButton[i].addEventListener("click", function () {
+          dropdownMenu.style.display = "block";
+        });
+      }
+
       closeButton.addEventListener("click", function () {
         dropdownMenu.style.display = "none";
       });
