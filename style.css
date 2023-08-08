@@ -931,20 +931,8 @@ footer p {
   }
 }
 
-@media screen and (min-height: 680px) {
-  .top h1 {
-    bottom: 450px;
-  }
-}
-
 @media screen and (min-height: 754px) {
   .top h1 {
-    bottom: 530px;
-  }
-}
-
-@media screen and (min-height: 800px) {
-  .top h1 {
-    bottom: 590px;
+    bottom: 580px;
   }
 }
