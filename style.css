@@ -1,3 +1,4 @@
+/* Font Imports */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&display=swap");
@@ -12,10 +13,12 @@
   scroll-behavior: smooth;
 }
 
+/* Main Body */
 body {
   background-color: #ffffff;
 }
 
+/* Hero Section Background */
 .top {
   background-image: url(./assets/top1.png);
   background-size: cover;
@@ -25,11 +28,13 @@ body {
   position: relative;
 }
 
+/* Overlapping Mountains over hero Text  */
 .overlap {
   position: relative;
   height: 100vh;
 }
 
+/* Mountains Background Image */
 .mountains {
   background-image: url(./assets/topMountains.png);
   height: 100vh;
@@ -41,6 +46,7 @@ body {
   z-index: 1;
 }
 
+/* LosAngeles Mountains text */
 .top h1 {
   font-size: 230px;
   letter-spacing: 5px;
@@ -54,6 +60,7 @@ body {
   left: 720px;
 }
 
+/* Mountains Gradient and position */
 .top h1 span {
   background: -webkit-linear-gradient(
     -90deg,
@@ -69,6 +76,7 @@ body {
   bottom: -185px;
 }
 
+/* Navbar */
 nav {
   display: flex;
   align-items: center;
@@ -83,6 +91,7 @@ nav div {
   gap: 50px;
 }
 
+/* Navbar Logo */
 nav img {
   height: 45px;
 }
@@ -110,6 +119,13 @@ nav a:hover {
   box-shadow: inset 200px 0 0 0 #54b3d6;
 }
 
+/* font Awesome Menu Button */
+nav .fa-bars {
+  display: none;
+}
+
+
+/* Mobile Hamburger Menu button */
 .menu {
   display: none;
   background: #000000a8;
@@ -156,6 +172,8 @@ nav a:hover {
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+
+/* Section 2 Sticky Navbar */
 .stickyNavbar {
   position: sticky;
   top: 0;
@@ -189,10 +207,6 @@ nav a:hover {
   top: -5px;
 }
 
-nav .fa-bars {
-  display: none;
-}
-
 .stickyNavbar div a {
   font-size: 12px;
   letter-spacing: 1px;
@@ -213,6 +227,7 @@ nav .fa-bars {
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Section Section Background Image */
 #secondSection {
   background-image: url(./assets/middle.png);
   height: 110vh;
@@ -229,6 +244,7 @@ nav .fa-bars {
   left: 28%;
 }
 
+/* Second section text section */
 #secondSection h1 {
   opacity: 0.502;
   font-size: 136px;
@@ -269,6 +285,7 @@ nav .fa-bars {
   position: relative;
 }
 
+/* Carousel overlapping section 2 */
 .carousel {
   z-index: 1;
   padding: 20px 0 30px 0;
@@ -283,6 +300,7 @@ nav .fa-bars {
   height: 140px;
 }
 
+/* Section 3 */
 #sectionThree {
   background-image: url(./assets/bottom.png);
   height: 80vh;
@@ -331,51 +349,7 @@ nav .fa-bars {
   font-family: "Lato";
 }
 
-footer {
-  background-color: #414f6b;
-}
-
-footer div {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 8px 0;
-}
-
-footer div img {
-  height: 45px;
-  background-color: #41547a;
-  mix-blend-mode: multiply;
-  border-radius: 50%;
-}
-
-#losAnglesMountainsLOGOFooter {
-  font-size: 21px;
-  line-height: 23px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #61759e;
-  font-family: "Bebas Neue";
-  letter-spacing: 0.5px;
-  position: relative;
-  left: 10px;
-}
-
-#losAnglesMountainsLOGOFooter span {
-  letter-spacing: 1.2px;
-}
-
-footer p {
-  font-size: 12px;
-  letter-spacing: 1px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #63769d;
-  font-weight: 900;
-  font-style: italic;
-  font-family: "Lato";
-}
-
+/* Section 3 Mountains Tabs */
 .sec3Nav {
   background-color: #3f4e6c;
   padding: 10px 580px;
@@ -403,6 +377,7 @@ footer p {
   text-decoration: underline;
 }
 
+/* Schedule Div in Section 3 */
 .schedule {
   background-color: #ffffff98;
   width: fit-content;
@@ -448,6 +423,56 @@ footer p {
   font-weight: 300;
   font-family: "Lato";
 }
+
+
+/* Footer */
+footer {
+  background-color: #414f6b;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+}
+
+footer div img {
+  height: 45px;
+  background-color: #41547a;
+  mix-blend-mode: multiply;
+  border-radius: 50%;
+}
+
+#losAnglesMountainsLOGOFooter {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #61759e;
+  font-family: "Bebas Neue";
+  letter-spacing: 0.5px;
+  position: relative;
+  left: 10px;
+}
+
+#losAnglesMountainsLOGOFooter span {
+  letter-spacing: 1.2px;
+}
+
+footer p {
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #63769d;
+  font-weight: 900;
+  font-style: italic;
+  font-family: "Lato";
+}
+
+
+/* Media Queries to Make Webpage Responsive */
 
 @media screen and (max-width: 1920px) {
   .top h1 {
